@@ -1,0 +1,11 @@
+server:
+  port: 7000
+
+spring:
+  application:
+    name: user-center
+#  cloud:
+#    nacos:
+#      discovery:
+#        metadata:
+#          version: jun

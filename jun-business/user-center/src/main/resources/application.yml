@@ -1,0 +1,62 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${jun.datasource.ip}:3306/user-center?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: ${jun.datasource.username}
+    password: ${jun.datasource.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.jun.plugin.common.model
+  global-config:
+    db-config:
+      id-type: auto
+
+jun:
+  swagger:
+    enabled: true
+    title: 用户中心
+    description: 用户中心接口文档
+    version: 1.0
+    base-package: com.jun.plugin.user.controller
+  cache-manager:
+    configs:
+      - key: menu
+        second: 300
+      - key: user
+        second: 1800
+  #多租户配置
+  tenant:
+    enable: true
+    ignoreTables:
+      - sys_user
+      - sys_role_user
+      - sys_role_menu
+    ignoreSqls:
+      # 用户关联角色时，显示所有角色
+      - com.jun.plugin.user.mapper.SysRoleMapper.findAll
+      # 用户列表显示用户所关联的所有角色
+      - com.jun.plugin.user.mapper.SysUserRoleMapper.findRolesByUserIds
+  # 数据权限
+  datascope:
+    enabled: false
+    ignoreTables:
+      - sys_role_user
+      - sys_role_menu
+    includeSqls:
+      # 用户列表
+      - com.jun.plugin.user.mapper.SysUserMapper.findList
+      # 角色列表
+      - com.jun.plugin.user.mapper.SysRoleMapper.findList
+      # 菜单列表
+      - com.jun.plugin.user.mapper.SysMenuMapper.selectList
+  #审计日志
+#  audit-log:
+#    enabled: true
+#    log-type: db
+#    datasource:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      jdbc-url: jdbc:mysql://${jun.datasource.ip}:3306/logger-center?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+#      username: ${jun.datasource.username}
+#      password: ${jun.datasource.password}

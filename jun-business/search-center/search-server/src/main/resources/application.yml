@@ -1,0 +1,16 @@
+spring:
+  elasticsearch:
+    rest:
+      uris: ${jun.elasticsearch.uris}
+      username: ${jun.elasticsearch.username}
+      password: ${jun.elasticsearch.password}
+
+jun:
+  indices:
+    show: sys-log-*,mysql-slowlog-*,sys_user,point-log-*,audit-log-*
+  swagger:
+    enabled: true
+    title: 搜索中心
+    description: 搜索中心接口文档
+    version: 1.0
+    base-package: com.jun.plugin.search.controller

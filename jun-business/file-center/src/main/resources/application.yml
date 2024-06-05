@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${jun.datasource.ip}:3306/file_center?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: ${jun.datasource.username}
+    password: ${jun.datasource.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.jun.plugin.file.model
+  global-config:
+    db-config:
+      id-type: INPUT
+
+jun:
+  file-server:
+    type: s3
+    #fdfs:
+    #  web-url: ${jun.fdfs.web-url}
+    s3:
+      access-key: ${jun.s3.access-key}
+      accessKeySecret: ${jun.s3.accessKeySecret}
+      endpoint: ${jun.s3.endpoint}
+      bucketName: ${jun.s3.bucketName}
+  swagger:
+    enabled: true
+    title: 文件中心
+    description: 文件中心接口文档
+    version: 1.0
+    base-package: com.jun.plugin.file.controller
+  #多租户配置
+  tenant:
+    enable: true
+
+#fastDFS配置
+#fdfs:
+#  soTimeout: 1500
+#  connectTimeout: 600
+#  trackerList: ${jun.fdfs.trackerList}
