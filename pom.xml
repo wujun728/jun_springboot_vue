@@ -3,10 +3,29 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.jun.plugin</groupId>
+    <groupId>io.github.wujun728</groupId>
     <artifactId>jun_microservice</artifactId>
     <version>1.0.16</version>
     <packaging>pom</packaging>
+
+    <modules>
+        <!-- 公共 -->
+        <!--        <module>jun-commons</module>-->
+        <!-- 认证 -->
+        <module>jun-uaa</module>
+        <!-- 网关 -->
+        <module>jun-gateway</module>
+        <!-- 业务 -->
+        <module>jun-business</module>
+        <!-- 前端 -->
+        <module>jun-web</module>
+        <!-- 监控 -->
+        <!--        <module>jun-monitor</module>-->
+        <!-- 配置 -->
+        <module>jun-config</module>
+        <!-- demo -->
+        <!--        <module>jun-demo</module>-->
+    </modules>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -102,57 +121,57 @@
         <dependencies>
             <!-- 自定义 starter -->
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>jun-common-spring-boot-starter</artifactId>
                 <version>${jun.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>jun-db-spring-boot-starter</artifactId>
                 <version>${jun.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>jun-log-spring-boot-starter</artifactId>
                 <version>${jun.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>jun-redis-spring-boot-starter</artifactId>
                 <version>${jun.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>jun-swagger2-spring-boot-starter</artifactId>
                 <version>${jun.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>jun-loadbalancer-spring-boot-starter</artifactId>
                 <version>${jun.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>jun-oauth2-spring-boot-starter</artifactId>
                 <version>${jun.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>jun-sentinel-spring-boot-starter</artifactId>
                 <version>${jun.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>jun-config</artifactId>
                 <version>${jun.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>jun-common-core</artifactId>
                 <version>${jun.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>jun-elasticsearch-spring-boot-starter</artifactId>
                 <version>${jun.version}</version>
             </dependency>
@@ -288,7 +307,7 @@
                 <version>${fastdfs-client.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>search-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -368,12 +387,12 @@
                 <version>${dubbo.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>jun-oss-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jun.plugin</groupId>
+                <groupId>io.github.wujun728</groupId>
                 <artifactId>jun-zookeeper-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -473,7 +492,7 @@
             </snapshots>
         </repository>
     </repositories>
-    <distributionManagement>
+    <!--<distributionManagement>
         <repository>
             <id>releases</id>
             <name>releases Repository</name>
@@ -485,26 +504,6 @@
             <url>http://192.168.28.138:8081/repository/maven-snapshots/</url>
             <uniqueVersion>true</uniqueVersion>
         </snapshotRepository>
-    </distributionManagement>
-
-    <modules>
-        <!-- 公共 -->
-<!--        <module>zlt-commons</module>-->
-        <!-- 认证 -->
-        <module>jun-uaa</module>
-        <!-- 网关 -->
-        <module>jun-gateway</module>
-        <!-- 业务 -->
-        <module>jun-business</module>
-        <!-- 前端 -->
-        <module>jun-web</module>
-        <!-- 监控 -->
-<!--        <module>zlt-monitor</module>-->
-        <!-- 配置 -->
-        <module>jun-config</module>
-        <!-- demo -->
-<!--        <module>zlt-demo</module>-->
-    </modules>
-
+    </distributionManagement>-->
 
 </project>

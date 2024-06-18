@@ -1,7 +1,7 @@
 package ${package}.${moduleName}.service;
 
 import ${package}.${moduleName}.model.${className};
-import com.jun.plugin.common.model.PageResult;
+import io.github.wujun728.common.model.PageResult;
 import ${package}.common.service.ISuperService;
 
 import java.util.Map;

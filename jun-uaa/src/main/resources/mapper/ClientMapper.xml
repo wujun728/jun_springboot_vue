@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jun.plugin.oauth.mapper.ClientMapper">
+<mapper namespace="io.github.wujun728.oauth.mapper.ClientMapper">
 
     <sql id="where">
         <where>
@@ -44,7 +44,7 @@
         </where>
     </sql>
 
-    <select id="findList" resultType="com.jun.plugin.oauth.model.Client">
+    <select id="findList" resultType="io.github.wujun728.oauth.model.Client">
         select id, client_id, client_name, resource_ids
             , client_secret, client_secret_str, web_server_redirect_uri
             , scope, authorized_grant_types, autoapprove

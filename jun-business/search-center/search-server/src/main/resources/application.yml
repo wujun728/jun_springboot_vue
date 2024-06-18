@@ -13,4 +13,4 @@ jun:
     title: 搜索中心
     description: 搜索中心接口文档
     version: 1.0
-    base-package: com.jun.plugin.search.controller
+    base-package: io.github.wujun728.search.controller

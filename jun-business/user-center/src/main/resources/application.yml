@@ -8,7 +8,7 @@ spring:
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.jun.plugin.common.model
+  typeAliasesPackage: io.github.wujun728.common.model
   global-config:
     db-config:
       id-type: auto
@@ -19,7 +19,7 @@ jun:
     title: 用户中心
     description: 用户中心接口文档
     version: 1.0
-    base-package: com.jun.plugin.user.controller
+    base-package: io.github.wujun728.user.controller
   cache-manager:
     configs:
       - key: menu
@@ -35,9 +35,9 @@ jun:
       - sys_role_menu
     ignoreSqls:
       # 用户关联角色时，显示所有角色
-      - com.jun.plugin.user.mapper.SysRoleMapper.findAll
+      - io.github.wujun728.user.mapper.SysRoleMapper.findAll
       # 用户列表显示用户所关联的所有角色
-      - com.jun.plugin.user.mapper.SysUserRoleMapper.findRolesByUserIds
+      - io.github.wujun728.user.mapper.SysUserRoleMapper.findRolesByUserIds
   # 数据权限
   datascope:
     enabled: false
@@ -46,11 +46,11 @@ jun:
       - sys_role_menu
     includeSqls:
       # 用户列表
-      - com.jun.plugin.user.mapper.SysUserMapper.findList
+      - io.github.wujun728.user.mapper.SysUserMapper.findList
       # 角色列表
-      - com.jun.plugin.user.mapper.SysRoleMapper.findList
+      - io.github.wujun728.user.mapper.SysRoleMapper.findList
       # 菜单列表
-      - com.jun.plugin.user.mapper.SysMenuMapper.selectList
+      - io.github.wujun728.user.mapper.SysMenuMapper.selectList
   #审计日志
 #  audit-log:
 #    enabled: true

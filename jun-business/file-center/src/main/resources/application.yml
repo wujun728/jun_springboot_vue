@@ -8,7 +8,7 @@ spring:
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.jun.plugin.file.model
+  typeAliasesPackage: io.github.wujun728.file.model
   global-config:
     db-config:
       id-type: INPUT
@@ -28,7 +28,7 @@ jun:
     title: 文件中心
     description: 文件中心接口文档
     version: 1.0
-    base-package: com.jun.plugin.file.controller
+    base-package: io.github.wujun728.file.controller
   #多租户配置
   tenant:
     enable: true

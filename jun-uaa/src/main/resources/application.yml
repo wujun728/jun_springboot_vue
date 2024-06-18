@@ -8,7 +8,7 @@ spring:
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.jun.plugin.oauth.model
+  typeAliasesPackage: io.github.wujun728.oauth.model
   global-config:
     db-config:
       id-type: auto
@@ -23,7 +23,7 @@ jun:
     title: 认证中心
     description: 认证中心接口文档
     version: 1.0
-    base-package: com.jun.plugin.oauth.controller
+    base-package: io.github.wujun728.oauth.controller
   security:
     code:
       # 忽略验证码的应用编号
@@ -43,7 +43,7 @@ jun:
     enabled: false
     includeSqls:
       # 应用列表
-      - com.jun.plugin.oauth.mapper.oauth.ClientMapper.findList
+      - io.github.wujun728.oauth.mapper.oauth.ClientMapper.findList
   datasource:
     ip: localhost
     username: root

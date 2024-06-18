@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jun.plugin.user.mapper.SysUserMapper">
+<mapper namespace="io.github.wujun728.user.mapper.SysUserMapper">
 	<sql id="where">
 		<where>
 			t.is_del=0
@@ -35,7 +35,7 @@
 		</where>
 	</sql>
 
-	<select id="findList" resultType="com.jun.plugin.common.model.SysUser">
+	<select id="findList" resultType="io.github.wujun728.common.model.SysUser">
 		select * from sys_user t
 		<include refid="where" />
 		order by t.id desc

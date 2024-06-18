@@ -27,7 +27,7 @@
 **以下 2 种运行方式，选一种运行即可。**
 
 #### 2.1.1. 方式一：直接运行
-运行类 `com.jun.plugin.web.BackWebApplication`
+运行类 `io.github.wujun728.web.BackWebApplication`
 > 基于 SpringBoot 内嵌的 web 容器
 
 #### 2.1.2. 方式二：静态服务器运行

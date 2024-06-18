@@ -1,0 +1,6 @@
+server:
+  port: 9900
+
+spring:
+  application:
+    name: sc-gateway

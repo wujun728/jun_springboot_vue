@@ -1,4 +1,4 @@
-package com.jun.plugin.generator.utils;
+package io.github.wujun728.generator.utils;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 /**
  * GenUtils测试用例
  *
- * @author zlt
+ * @author jun
  * @date 2019/5/10
  */
 @SpringBootTest

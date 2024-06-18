@@ -1,7 +1,7 @@
 package ${package}.${moduleName}.mapper;
 
 import ${package}.${moduleName}.model.${className};
-import com.jun.plugin.db.mapper.SuperMapper;
+import io.github.wujun728.db.mapper.SuperMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Mapper;

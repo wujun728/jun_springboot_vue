@@ -11,6 +11,6 @@ spring:
 
 encrypt:
   key-store:
-    location: classpath:zlt.jks
-    secret: zlt!@#$
-    alias: zlt
+    location: classpath:jun.jks
+    secret: jun!@#$
+    alias: jun

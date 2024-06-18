@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jun.plugin.user.mapper.SysRoleMenuMapper">
+<mapper namespace="io.github.wujun728.user.mapper.SysRoleMenuMapper">
 
 	<update id="delete">
 		delete from sys_role_menu
@@ -15,7 +15,7 @@
 		</where>
 	</update>
 
-	<select id="findMenusByRoleIds" resultType="com.jun.plugin.common.model.SysMenu">
+	<select id="findMenusByRoleIds" resultType="io.github.wujun728.common.model.SysMenu">
 		select distinct t.* from sys_menu t
 		inner join sys_role_menu r on r.menu_id = t.id
 		where
@@ -30,7 +30,7 @@
 		ORDER BY sort ASC
 	</select>
 
-    <select id="findMenusByRoleCodes" resultType="com.jun.plugin.common.model.SysMenu">
+    <select id="findMenusByRoleCodes" resultType="io.github.wujun728.common.model.SysMenu">
 		select distinct t.* from sys_menu t
 		inner join sys_role_menu r on r.menu_id = t.id
 		inner join sys_role rl on rl.id = r.role_id
