@@ -6,7 +6,7 @@ application.pid
 .mtj.tmp/
 
 # Package Files #
-*.jar
+# *.jar
 *.war
 *.ear
 
@@ -17,7 +17,14 @@ hs_err_pid*
 .classpath
 .project
 target
+bin
+classes
 .settings
+.factorypath
+doc2
+log
+logs
+target
 
 # Idea
 .idea
@@ -25,5 +32,3 @@ target
 
 # git
 *.orig
-
-doc2
