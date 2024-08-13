@@ -47,10 +47,10 @@ public class MybatisPlusConfig {
         return interceptor;
     }
 
-    @Bean
+    /*@Bean
     public ConfigurationCustomizer configurationCustomizer() {
         return configuration -> configuration.setUseDeprecatedExecutor(false);
-    }
+    }*/
 
     @Bean
     public GlobalConfig globalConfiguration() {

@@ -124,7 +124,7 @@ public class SysPostServiceImpl implements ISysPostService
      * @return 结果
      */
     @Override
-    public int countUserPostById(Long postId)
+    public Long countUserPostById(Long postId)
     {
         return userPostMapper.selectCount(new QueryWrapper<SysUserPost>().lambda().eq(SysUserPost::getPostId, postId));
     }

@@ -140,7 +140,7 @@ public class SysDeptServiceImpl implements ISysDeptService
      * @return 子部门数
      */
     @Override
-    public int selectNormalChildrenDeptById(Long deptId)
+    public Long selectNormalChildrenDeptById(Long deptId)
     {
         return deptMapper.selectCount(new QueryWrapper<SysDept>().lambda().likeLeft(SysDept::getAncestors, deptId).eq(SysDept::getDelFlag, UserConstants.UN_DELETE).eq(SysDept::getStatus, UserConstants.NORMAL));
     }
@@ -154,7 +154,7 @@ public class SysDeptServiceImpl implements ISysDeptService
     @Override
     public boolean hasChildByDeptId(Long deptId)
     {
-        int result = deptMapper.selectCount(new QueryWrapper<SysDept>().lambda().eq(SysDept::getParentId, deptId).eq(SysDept::getDelFlag, UserConstants.UN_DELETE));
+        Long result = deptMapper.selectCount(new QueryWrapper<SysDept>().lambda().eq(SysDept::getParentId, deptId).eq(SysDept::getDelFlag, UserConstants.UN_DELETE));
         return result > 0;
     }
 
@@ -167,7 +167,7 @@ public class SysDeptServiceImpl implements ISysDeptService
     @Override
     public boolean checkDeptExistUser(Long deptId)
     {
-        int result = userMapper.selectCount(new QueryWrapper<SysUser>().lambda().eq(SysUser::getDeptId, deptId).eq(SysUser::getDelFlag, UserConstants.UN_DELETE));
+        Long result = userMapper.selectCount(new QueryWrapper<SysUser>().lambda().eq(SysUser::getDeptId, deptId).eq(SysUser::getDelFlag, UserConstants.UN_DELETE));
 
         return result > 0;
     }

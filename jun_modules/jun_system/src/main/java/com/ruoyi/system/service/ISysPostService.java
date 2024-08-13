@@ -65,7 +65,7 @@ public interface ISysPostService
      * @param postId 岗位ID
      * @return 结果
      */
-    public int countUserPostById(Long postId);
+    public Long countUserPostById(Long postId);
 
     /**
      * 删除岗位信息

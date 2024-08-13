@@ -65,7 +65,7 @@ public interface ISysDeptService
      * @param deptId 部门ID
      * @return 子部门数
      */
-    int selectNormalChildrenDeptById(Long deptId);
+    Long selectNormalChildrenDeptById(Long deptId);
 
     /**
      * 是否存在部门子节点

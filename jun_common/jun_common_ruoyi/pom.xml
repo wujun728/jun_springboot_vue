@@ -39,6 +39,16 @@
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jsqlparser</artifactId>
+                    <groupId>com.github.jsqlparser</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>mybatis</artifactId>
+                    <groupId>org.mybatis</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- 自定义验证注解 -->
@@ -137,6 +147,67 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatisplus.version}</version>
         </dependency>
+
+        <!--<dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun-common</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun-common-spring-boot-starter</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun-db-spring-boot-starter</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun-db-record-sql-engine</artifactId>
+            <version>1.1.2</version>
+        </dependency>-->
+        <!--<dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun-code-generator-spring-boot-starter</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun-oss-spring-boot-starter</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun-job-spring-boot-starter</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun-log-spring-boot-starter</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun-redis-spring-boot-starter</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun-sms-spring-boot-starter</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun-snakerflow-spring-boot-starter</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun-groovy-api-spring-boot-starter</artifactId>
+            <version>1.1.2</version>
+        </dependency>-->
 
     </dependencies>
 

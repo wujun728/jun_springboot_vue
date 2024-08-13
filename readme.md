@@ -2,6 +2,15 @@
 * 在若依v3.8.5的版本上增加了Lombok和mybatis-plus
 * 本项目参考了 [范生德 / ruoyi-mybatis-plus](https://gitee.com/sou100/ruoyi-mybatis-plus)
 
+
+spring boot 2.6.14
+mybatis starter 2.3.1
+mybatis-plus 3.5.3.2
+pageHelper starter 1.4.7
+排除了pageHelper中的jsqlparser
+
+
+
 <p align="center">
 	<img alt="logo" src="https://oscimg.oschina.net/oscnet/up-d3d0a9303e11d522a06cd263f3079027715.png">
 </p>

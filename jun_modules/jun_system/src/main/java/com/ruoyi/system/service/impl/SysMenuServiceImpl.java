@@ -287,7 +287,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
     @Override
     public boolean hasChildByMenuId(Long menuId)
     {
-        int result = menuMapper.selectCount(new QueryWrapper<SysMenu>().lambda().eq(SysMenu::getParentId, menuId));
+        Long result = menuMapper.selectCount(new QueryWrapper<SysMenu>().lambda().eq(SysMenu::getParentId, menuId));
 
         return result > 0;
     }
@@ -301,7 +301,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
     @Override
     public boolean checkMenuExistRole(Long menuId)
     {
-        int result = roleMenuMapper.selectCount(new QueryWrapper<SysRoleMenu>().lambda().eq(SysRoleMenu::getMenuId, menuId));
+        Long result = roleMenuMapper.selectCount(new QueryWrapper<SysRoleMenu>().lambda().eq(SysRoleMenu::getMenuId, menuId));
 
         return result > 0;
     }

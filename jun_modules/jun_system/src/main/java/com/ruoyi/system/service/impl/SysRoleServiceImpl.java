@@ -233,7 +233,7 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> impl
      * @return 结果
      */
     @Override
-    public int countUserRoleByRoleId(Long roleId)
+    public Long countUserRoleByRoleId(Long roleId)
     {
         return userRoleMapper.selectCount(new QueryWrapper<SysUserRole>().lambda().eq(SysUserRole::getRoleId, roleId));
     }
