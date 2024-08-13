@@ -11,6 +11,18 @@
 
     <name>jun_springboot_vue</name>
     <description>jun_springboot_vue 管理系统</description>
+
+    <modules>
+        <module>jun_common</module>
+        <module>jun_modules</module>
+        <module>jun_qixing</module>
+        <module>jun_admin</module>
+    </modules>
+    <packaging>pom</packaging>
+
+
+    <dependencies>
+    </dependencies>
     
     <properties>
         <jun.version>1.1.1</jun.version>
@@ -194,6 +206,11 @@
                 <artifactId>jun_common</artifactId>
                 <version>${jun.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.github.wujun728</groupId>
+                <artifactId>jun_qixing</artifactId>
+                <version>${jun.version}</version>
+            </dependency>
 
             <!-- mybatis 插件-->
             <dependency>
@@ -212,21 +229,6 @@
 	    
         </dependencies>
     </dependencyManagement>
-
-    <modules>
-        <module>jun_admin</module>
-        <module>jun_framework</module>
-        <module>jun_system</module>
-        <module>jun_quartz</module>
-        <module>jun_generator</module>
-        <module>jun_common</module>
-    </modules>
-    <packaging>pom</packaging>
-
-
-    <dependencies>
-
-    </dependencies>
 
     <build>
         <plugins>

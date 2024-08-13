@@ -60,6 +60,10 @@
             <groupId>io.github.wujun728</groupId>
             <artifactId>jun_generator</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun_qixing</artifactId>
+        </dependency>
 
     </dependencies>
 
