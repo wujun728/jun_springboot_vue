@@ -16,7 +16,7 @@ import com.ruoyi.common.utils.ServletUtils;
  *
  * @author ruoyi
  */
-@Component
+//@Component
 public abstract class RepeatSubmitInterceptor implements HandlerInterceptor
 {
     @Override

@@ -2,6 +2,7 @@ package com.ruoyi.framework.config;
 
 import java.util.concurrent.TimeUnit;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
@@ -24,6 +25,7 @@ import com.ruoyi.framework.interceptor.RepeatSubmitInterceptor;
 public class ResourcesConfig implements WebMvcConfigurer
 {
     @Autowired
+    @Qualifier("sameUrlDataInterceptor")
     private RepeatSubmitInterceptor repeatSubmitInterceptor;
 
     @Override
