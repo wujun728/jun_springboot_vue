@@ -213,6 +213,10 @@ public class TokenService
     private String getToken(HttpServletRequest request)
     {
         String token = request.getHeader(header);
+        String token2 = request.getParameter(header);
+        if (StringUtils.isEmpty(token)){
+            token = token2;
+        }
         if (StringUtils.isNotEmpty(token) && token.startsWith(Constants.TOKEN_PREFIX))
         {
             token = token.replace(Constants.TOKEN_PREFIX, "");

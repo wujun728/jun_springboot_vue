@@ -48,6 +48,10 @@
             <artifactId>dom4j</artifactId>
             <version>${dom4j.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun_system</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
