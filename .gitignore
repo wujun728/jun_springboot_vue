@@ -6,7 +6,7 @@ application.pid
 .mtj.tmp/
 
 # Package Files #
-*.jar
+# *.jar
 *.war
 *.ear
 
@@ -17,18 +17,18 @@ hs_err_pid*
 .classpath
 .project
 target
+bin
+classes
 .settings
-
-node_modules
+.factorypath
+doc2
+log
+logs
+target
 
 # Idea
 .idea
 *.iml
-*.log
-doc2
+
 # git
 *.orig
-
-doc22
-doc222
-ruoyi_web
