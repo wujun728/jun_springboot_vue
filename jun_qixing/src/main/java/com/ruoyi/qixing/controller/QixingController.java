@@ -6,15 +6,18 @@ import com.jfinal.plugin.activerecord.Record;
 import com.ruoyi.common.core.controller.BaseController;
 import com.ruoyi.common.core.domain.AjaxResult;
 import com.ruoyi.common.utils.SecurityUtils;
+import com.ruoyi.common.utils.spring.SpringUtils;
 import com.ruoyi.system.service.ISysMenuService;
+import io.github.wujun728.db.ActiveRecordUtil;
 import io.github.wujun728.db.RecordUtil;
-import io.github.wujun728.rest.util.TreeBuildUtil;
+import io.github.wujun728.db.TreeBuildUtil;
 import org.apache.commons.compress.utils.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -56,6 +59,7 @@ public class QixingController extends BaseController
         left join sys_user u on ur.user_id = u.user_id
         where u.user_id = #{userId} and m.menu_type in ('M', 'C') and m.status = 0  AND ro.status = 0
         order by m.parent_id, m.order_num*/
+        ActiveRecordUtil.initActiveRecordPlugin("main", SpringUtils.getBean(DataSource.class));
         List<Record> apps = Db.use().find(" SELECT * from sys_menu where parent_id = 0 ");
         List apps1 = RecordUtil.recordToMaps(apps,true);
         List<Record> menus = Db.use().find(" SELECT * from sys_menu where menu_type != 'F' ORDER BY parent_id,order_num ");

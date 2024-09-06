@@ -155,3 +155,7 @@ xss:
   excludes: /system/notice
   # 匹配链接
   urlPatterns: /system/*,/monitor/*,/tool/*
+
+jun:
+  activerecord:
+    enabled: true

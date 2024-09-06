@@ -61,6 +61,16 @@
             <artifactId>jun_generator</artifactId>
         </dependency>
 
+        <!--  齐兴模块-->
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun_qixing</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.wujun728</groupId>
+            <artifactId>jun_qixing</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

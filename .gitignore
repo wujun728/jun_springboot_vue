@@ -22,6 +22,7 @@ classes
 .settings
 .factorypath
 doc2
+*bak
 log
 logs
 target
